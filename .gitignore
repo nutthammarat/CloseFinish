@@ -1,0 +1,6 @@
+**/nbproject/private
+build/
+nsbuild/
+dist/
+nbdist/
+.nb-gradle/
