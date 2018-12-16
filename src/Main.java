@@ -1,17 +1,15 @@
-
 import java.util.*;
 
-import javax.swing.*;
-
 public class Main {
-
-    private JTable table1;
-    private JPanel panel1;
-    /*
     public static void main(String[] args) {
+//        CartService.addCartToOrder(UserService.getUser("admin"));
         
-        JFrame frame = new JFrame();
-       // frame.setContentPane(new Tableform().ge);
+        OrderService.getOrder(UserService.getUser("admin"));
+    
+
+
+
+
         
         
         
@@ -67,6 +65,8 @@ public class Main {
 //
 //        }
     
-    }
-    */
+    
+    
+}
+    
 }

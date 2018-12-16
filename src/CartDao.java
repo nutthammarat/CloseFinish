@@ -65,6 +65,9 @@ public class CartDao {
         
         return cart;
     }
+    public static ArrayList<Cart> getAllProduct(User user){
+        return CartDao.getAllProductCart(user);
+    }
 
     static public Product getProductCart(User user, Product product) {
         Product thisProduct = null;

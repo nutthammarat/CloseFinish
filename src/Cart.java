@@ -35,6 +35,6 @@ public class Cart {
     
     public String toString(){
         return product.getName() + "       " + product.getBrand() + "        "+ product.getColor()+
-                "      " + product.getPrice();
+                "      " + product.getPrice() ;
     }
 }

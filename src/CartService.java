@@ -1,4 +1,4 @@
-
+ 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -17,17 +17,9 @@ public class CartService {
     public static boolean addToCart(User users, Product product, int num) {
         return CartDao.addCart(users, product, num);
     }
-//    public static boolean checkNullCart(){
-//        usercurrentdao = LoginForm.userCurrent;
-//        User user = UserService.getUser(usercurrentdao);
-////        User user = UserService.getUser("user1");
-//        DefaultListModel listModel = new DefaultListModel();
-//        ArrayList<Cart> list = CartService.getAllProduct(user);
-//        if (list.isEmpty()) {
-//            JOptionPane.showMessageDialog(null, "ไม่มีสินค้าอยู่ในตะกร้า");
-//        } 
-//        return true;
-//    }
+   public static void addCartToOrder(User users){
+       OrderDao.addOrder(getAllProduct(users));
+    }
     public static void showList() {
         usercurrentdao = LoginForm.userCurrent;
         User user = UserService.getUser(usercurrentdao);
@@ -41,7 +33,7 @@ public class CartService {
             
         } else {
             for (Cart e : list) {
-                listModel.addElement(e.toString() + " จำนวน " + e.getNum());
+                listModel.addElement(e.toString() + "     จำนวน   " + e.getNum() + "  ชิ้น");
          
             }
             
@@ -64,7 +56,7 @@ public class CartService {
 
     }
 
-    public static void showCart() {
+    public static void showCartPage() {
         CartPage cart = new CartPage();
         cart.setVisible(true);
     }

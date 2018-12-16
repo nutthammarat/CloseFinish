@@ -51,13 +51,12 @@ public class MainPage extends javax.swing.JFrame {
         lbl_Pic4 = new javax.swing.JLabel();
         lbl_Pic5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        x12 = new javax.swing.JLabel();
-        x10 = new javax.swing.JLabel();
-        x11 = new javax.swing.JLabel();
-        x13 = new javax.swing.JLabel();
-        x14 = new javax.swing.JLabel();
-        x15 = new javax.swing.JLabel();
-        lbl_bg = new javax.swing.JLabel();
+        lbl_Name3 = new javax.swing.JLabel();
+        lbl_Name1 = new javax.swing.JLabel();
+        lbl_Name2 = new javax.swing.JLabel();
+        lbl_Name4 = new javax.swing.JLabel();
+        lbl_Name5 = new javax.swing.JLabel();
+        lbl_Name6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(746, 600));
@@ -162,37 +161,33 @@ public class MainPage extends javax.swing.JFrame {
         lbl_Pic5.setBounds(310, 330, 100, 100);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel8.setText("ซื้อเหอะอยากขาย");
+        jLabel8.setText("Clothes Shop");
         getContentPane().add(jLabel8);
         jLabel8.setBounds(80, 30, 290, 70);
 
-        x12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        getContentPane().add(x12);
-        x12.setBounds(520, 110, 130, 20);
+        lbl_Name3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        getContentPane().add(lbl_Name3);
+        lbl_Name3.setBounds(520, 110, 130, 20);
 
-        x10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        getContentPane().add(x10);
-        x10.setBounds(70, 110, 130, 20);
+        lbl_Name1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        getContentPane().add(lbl_Name1);
+        lbl_Name1.setBounds(70, 110, 130, 20);
 
-        x11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        getContentPane().add(x11);
-        x11.setBounds(290, 110, 200, 20);
+        lbl_Name2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        getContentPane().add(lbl_Name2);
+        lbl_Name2.setBounds(290, 110, 200, 20);
 
-        x13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        getContentPane().add(x13);
-        x13.setBounds(80, 300, 160, 20);
+        lbl_Name4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        getContentPane().add(lbl_Name4);
+        lbl_Name4.setBounds(80, 300, 160, 20);
 
-        x14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        getContentPane().add(x14);
-        x14.setBounds(300, 300, 150, 20);
+        lbl_Name5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        getContentPane().add(lbl_Name5);
+        lbl_Name5.setBounds(300, 300, 150, 20);
 
-        x15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        getContentPane().add(x15);
-        x15.setBounds(550, 300, 120, 20);
-
-        lbl_bg.setIcon(new javax.swing.ImageIcon("E:\\ProJectFinal-master\\src\\org\\me\\myimageapp\\resources\\bg.png")); // NOI18N
-        getContentPane().add(lbl_bg);
-        lbl_bg.setBounds(0, -10, 750, 590);
+        lbl_Name6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        getContentPane().add(lbl_Name6);
+        lbl_Name6.setBounds(550, 300, 120, 20);
 
         pack();
         setLocationRelativeTo(null);
@@ -240,7 +235,7 @@ public class MainPage extends javax.swing.JFrame {
     private void btn_CartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CartActionPerformed
         CartPage c = new CartPage();
         c.setVisible(false);
-        CartService.showCart();
+        CartService.showCartPage();
         CartService.showList();
         
     }//GEN-LAST:event_btn_CartActionPerformed
@@ -272,18 +267,17 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JButton btn_Detail6;
     private javax.swing.JButton btn_Profile;
     private javax.swing.JLabel jLabel8;
+    public static javax.swing.JLabel lbl_Name1;
+    public static javax.swing.JLabel lbl_Name2;
+    public static javax.swing.JLabel lbl_Name3;
+    public static javax.swing.JLabel lbl_Name4;
+    public static javax.swing.JLabel lbl_Name5;
+    public static javax.swing.JLabel lbl_Name6;
     public static javax.swing.JLabel lbl_Pic1;
     public static javax.swing.JLabel lbl_Pic2;
     public static javax.swing.JLabel lbl_Pic3;
     public static javax.swing.JLabel lbl_Pic4;
     public static javax.swing.JLabel lbl_Pic5;
     public static javax.swing.JLabel lbl_Pic6;
-    private javax.swing.JLabel lbl_bg;
-    public static javax.swing.JLabel x10;
-    public static javax.swing.JLabel x11;
-    public static javax.swing.JLabel x12;
-    public static javax.swing.JLabel x13;
-    public static javax.swing.JLabel x14;
-    public static javax.swing.JLabel x15;
     // End of variables declaration//GEN-END:variables
 }

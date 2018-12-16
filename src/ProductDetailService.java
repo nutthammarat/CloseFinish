@@ -110,7 +110,7 @@ public class ProductDetailService {
 
     public static void showCartPage(int index) {
         if (index == 0) {
-            CartService.showCart();
+            CartService.showCartPage();
             CartService.showList();
         }
 

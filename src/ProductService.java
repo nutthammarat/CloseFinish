@@ -20,27 +20,27 @@ public abstract class ProductService {
         for (Product e : product) {
             Product product1 = ProductService.getProduct(e.getId());
             if (i == 0) {
-                MainPage.x10.setText(product1.getName().toUpperCase());
+                MainPage.lbl_Name1.setText(product1.getName().toUpperCase());
                 ImageIcon icon = new ImageIcon(ProductDetailService.S01);
                 MainPage.lbl_Pic1.setIcon(icon);
             } else if (i == 1) {
-                MainPage.x11.setText(product1.getName().toUpperCase());
+                MainPage.lbl_Name2.setText(product1.getName().toUpperCase());
                 ImageIcon icon = new ImageIcon(ProductDetailService.S02);
                 MainPage.lbl_Pic2.setIcon(icon);
             } else if (i == 2) {
-                MainPage.x12.setText(product1.getName().toUpperCase());
+                MainPage.lbl_Name3.setText(product1.getName().toUpperCase());
                 ImageIcon icon = new ImageIcon(ProductDetailService.S03);
                 MainPage.lbl_Pic3.setIcon(icon);
             } else if (i == 3) {
-                MainPage.x13.setText(product1.getName().toUpperCase());
+                MainPage.lbl_Name4.setText(product1.getName().toUpperCase());
                 ImageIcon icon = new ImageIcon(ProductDetailService.S04);
                 MainPage.lbl_Pic4.setIcon(icon);
             } else if (i == 4) {
-                MainPage.x14.setText(product1.getName().toUpperCase());
+                MainPage.lbl_Name5.setText(product1.getName().toUpperCase());
                 ImageIcon icon = new ImageIcon(ProductDetailService.S05);
                 MainPage.lbl_Pic5.setIcon(icon);
             } else if (i == 5) {
-                MainPage.x15.setText(product1.getName().toUpperCase());
+                MainPage.lbl_Name6.setText(product1.getName().toUpperCase());
                 ImageIcon icon = new ImageIcon(ProductDetailService.S06);
                 MainPage.lbl_Pic6.setIcon(icon);
                 break;

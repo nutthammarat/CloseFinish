@@ -59,6 +59,11 @@ public class CartPage extends javax.swing.JFrame {
         jLabel7.setBounds(70, 220, 0, 0);
 
         btn_confirmorder.setText("ยืนยันการสั่งสินค้า");
+        btn_confirmorder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_confirmorderActionPerformed(evt);
+            }
+        });
         getContentPane().add(btn_confirmorder);
         btn_confirmorder.setBounds(440, 330, 130, 23);
 
@@ -119,6 +124,11 @@ public class CartPage extends javax.swing.JFrame {
     private void btn_ProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ProfileActionPerformed
         ProfileService.showProfileForm();
     }//GEN-LAST:event_btn_ProfileActionPerformed
+
+    private void btn_confirmorderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_confirmorderActionPerformed
+        
+        OrderService.showOrderPage();
+    }//GEN-LAST:event_btn_confirmorderActionPerformed
 
     /**
      * @param args the command line arguments

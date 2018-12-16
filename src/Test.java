@@ -37,11 +37,7 @@ static MongoClientURI uri = new MongoClientURI("mongodb://admin:password1@ds2495
     public Test() {
         initComponents();
     }
-    public static void main(String[] args) {
-        JFrame frame = new JFrame();
-        frame.setContentPane(new Test().getShowTable());
-       // new Test().setTable();
-    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
