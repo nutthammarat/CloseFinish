@@ -15,7 +15,7 @@ public class OrderPage extends javax.swing.JFrame {
      */
     public OrderPage() {
         initComponents();
-        OrderService.getOrder(UserService.getUser("admin"));
+        OrderService.getOrder(UserService.getUser(LoginForm.userCurrent));
     }
 
     /**
@@ -28,7 +28,6 @@ public class OrderPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         sumtxt = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -44,18 +43,20 @@ public class OrderPage extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(60, 30, 140, 40);
 
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(340, 20, 110, 20);
-
         jLabel3.setText("ราคารวม : ");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(410, 280, 60, 20);
+        jLabel3.setBounds(410, 250, 60, 20);
         getContentPane().add(sumtxt);
         sumtxt.setBounds(480, 280, 100, 20);
 
         jButton1.setText("Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
-        jButton1.setBounds(30, 280, 55, 23);
+        jButton1.setBounds(30, 250, 55, 23);
 
         jScrollPane2.setViewportView(jList1);
 
@@ -66,6 +67,10 @@ public class OrderPage extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        hide();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -73,7 +78,6 @@ public class OrderPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     public static javax.swing.JList<String> jList1;

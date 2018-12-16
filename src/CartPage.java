@@ -19,6 +19,7 @@ public class CartPage extends javax.swing.JFrame {
     public CartPage() {
         initComponents();
        // CartService.showList();
+       
         
     }
 
@@ -126,8 +127,8 @@ public class CartPage extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_ProfileActionPerformed
 
     private void btn_confirmorderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_confirmorderActionPerformed
-        
-        OrderService.showOrderPage();
+       
+        OrderService.checkCartNull();
     }//GEN-LAST:event_btn_confirmorderActionPerformed
 
     /**

@@ -2,6 +2,7 @@
 import java.awt.TextArea;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 import javax.swing.ListModel;
 
 /*
@@ -23,16 +24,20 @@ public class OrderService {
         ArrayList<Order> order = OrderDao.getOrder(user);
         ArrayList<String> arr = new ArrayList<>();
         DefaultListModel listModel = new DefaultListModel();
-       // ArrayList<Cart> list = CartService.getAllProduct(user);
+        // ArrayList<Cart> list = CartService.getAllProduct(user);
+        int index = 1;
         for (Order e : order) {
             for (Cart ee : e.getOrder()) {
-                //System.out.println(ee.getProduct().getName() + " " + ee.getProduct().getPrice()+ " " + ee.getNum());
-                listModel.addElement(ee.getProduct().getName() + " " + ee.getProduct().getPrice()+ " " + ee.getNum());
+                System.out.println(ee.getProduct().getName() + " " + ee.getProduct().getPrice() + " " + ee.getNum());
+                listModel.addElement(" Order No. " + index + " "+ ee.getProduct().getName() + " " + ee.getProduct().getPrice() + " " + ee.getNum());
             }
-           // System.out.println("==============================");
+
+            index++;
+            System.out.println("==============================");
+            System.out.println(listModel);
             OrderPage.jList1.setModel(listModel);
         }
-        //return arr;
+//        return arr;
     }
 
     public static void showOrderPage() {
@@ -40,8 +45,13 @@ public class OrderService {
         orderpage.setVisible(true);
     }
 
-    public static void getOrderDetail() {
-
+    public static void checkCartNull() {
+        try {
+            CartService.addCartToOrder(UserService.getUser(LoginForm.userCurrent));
+       OrderService.showOrderPage();
+        } catch (Exception exception) {
+            JOptionPane.showMessageDialog(null, "ไม่มีสินค้าอยู่ในตะกร้า กรุณาเพิ่มสินค้าในตระกร้าก่อนกดยืนยันสั่งซื้อสินค้า");
+        }
     }
 
 }

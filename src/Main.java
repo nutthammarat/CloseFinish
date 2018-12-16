@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 //        CartService.addCartToOrder(UserService.getUser("admin"));
         
-        OrderService.getOrder(UserService.getUser("admin"));
+        //OrderService.getOrder(UserService.getUser("admin"));
     
 
 

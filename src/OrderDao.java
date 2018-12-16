@@ -33,6 +33,7 @@ public class OrderDao {
         ArrayList<Order> thisOrder = new ArrayList<>();
         MongoCursor<Document> cursor = col.find(findUser).iterator();
         while (cursor.hasNext()){
+            thisCart.clear();
             Document doc = cursor.next();
             ArrayList<Document> cart = (ArrayList<Document>) doc.get("order");
             for(int i = 0 ; i < cart.size() ; i++) {

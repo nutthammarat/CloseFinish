@@ -116,8 +116,10 @@ public class CartDao {
             col.deleteOne(new Document(findProduct));
         }
     }
-    public static void deleteAllProduct(User user,Product product){
-        
+    public static void deleteAllProduct(User user){
+        Product thisProduct = null;
+        Document findProduct = new Document("username", user.getUsername());
+        col.deleteMany(findProduct);
     }
 
 }

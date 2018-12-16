@@ -57,6 +57,7 @@ public class MainPage extends javax.swing.JFrame {
         lbl_Name4 = new javax.swing.JLabel();
         lbl_Name5 = new javax.swing.JLabel();
         lbl_Name6 = new javax.swing.JLabel();
+        btn_Logout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(746, 600));
@@ -189,6 +190,15 @@ public class MainPage extends javax.swing.JFrame {
         getContentPane().add(lbl_Name6);
         lbl_Name6.setBounds(550, 300, 120, 20);
 
+        btn_Logout.setText("Logout");
+        btn_Logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_LogoutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_Logout);
+        btn_Logout.setBounds(620, 60, 100, 23);
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -238,6 +248,7 @@ public class MainPage extends javax.swing.JFrame {
         CartService.showCartPage();
         CartService.showList();
         
+        
     }//GEN-LAST:event_btn_CartActionPerformed
 
     private void lbl_Pic1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_lbl_Pic1AncestorAdded
@@ -253,6 +264,11 @@ public class MainPage extends javax.swing.JFrame {
         this.hide();
     }//GEN-LAST:event_btn_ProfileActionPerformed
 
+    private void btn_LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LogoutActionPerformed
+        dispose();
+        RegisterService.goTOLogin();
+    }//GEN-LAST:event_btn_LogoutActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -265,6 +281,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JButton btn_Detail4;
     private javax.swing.JButton btn_Detail5;
     private javax.swing.JButton btn_Detail6;
+    public static javax.swing.JButton btn_Logout;
     private javax.swing.JButton btn_Profile;
     private javax.swing.JLabel jLabel8;
     public static javax.swing.JLabel lbl_Name1;

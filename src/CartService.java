@@ -1,4 +1,4 @@
- 
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -17,41 +17,48 @@ public class CartService {
     public static boolean addToCart(User users, Product product, int num) {
         return CartDao.addCart(users, product, num);
     }
-   public static void addCartToOrder(User users){
-       OrderDao.addOrder(getAllProduct(users));
+
+    public static void addCartToOrder(User users) {
+        try{
+        OrderDao.addOrder(getAllProduct(users));
+        deleteCart(users);
+        }catch (Exception e){
+            
+        }
     }
+
     public static void showList() {
         usercurrentdao = LoginForm.userCurrent;
         User user = UserService.getUser(usercurrentdao);
 //        User user = UserService.getUser("user1");
         DefaultListModel listModel = new DefaultListModel();
         ArrayList<Cart> list = CartService.getAllProduct(user);
+        
         if (list.isEmpty()) {
-            refresh();
             JOptionPane.showMessageDialog(null, "ไม่มีสินค้าอยู่ในตะกร้า");
+
+            CartPage.list1.setVisible(false);
+        }else {
             
-            
-        } else {
             for (Cart e : list) {
                 listModel.addElement(e.toString() + "     จำนวน   " + e.getNum() + "  ชิ้น");
-         
+
             }
-            
+
             CartPage.list1.setModel(listModel);
         }
         CartPage.sumtxt.setText("" + calculatePrice());
     }
 
-    public static void deleteProduct(String id) {
+    public static boolean deleteProduct(String id) {
         User user = UserService.getUser(LoginForm.userCurrent);
         CartDao.deleteProduct(user, ProductService.getProduct(id));
         showList();
-
+        return true;
     }
 
-    public static void deleteAllProduct(String id) {
-        User user = UserService.getUser(LoginForm.userCurrent);
-        CartDao.deleteAllProduct(user, ProductService.getProduct(id));
+    public static void deleteAllProduct(User user) {
+        CartDao.deleteAllProduct(user);
         showList();
 
     }
@@ -77,10 +84,10 @@ public class CartService {
         }
         return sum;
     }
-    public static void refresh(){
-        CartPage c = new  CartPage();
-        c.setVisible(false);
-        //c.setVisible(true);
+
+    public static void deleteCart(User user) {
+        CartDao.deleteAllProduct(user);
+        showList();
     }
 
 }
